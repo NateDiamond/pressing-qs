@@ -1,0 +1,23 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+model Game {
+  id            String        @default(cuid()) @id
+  rounds        Round[]
+}
+
+model Round {
+  id            String        @default(cuid()) @id
+  game          Game          @relation(fields: [gameId], references: [id])
+  gameId        String            
+  question      String
+  options       String[]        
+  answer        String?
+  guess         Boolean       @default(false)
+}
