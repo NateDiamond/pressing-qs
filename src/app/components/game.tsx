@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { GameState, Optional, SetBook, SetGameState } from "./phases/constants";
+import { GameState, Optional, SetGameState } from "./phases/constants";
 import { Start } from "./phases/start";
 import { Help } from "./phases/help";
 import { Select } from "./phases/select";

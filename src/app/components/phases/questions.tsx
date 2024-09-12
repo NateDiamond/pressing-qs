@@ -53,7 +53,7 @@ export function Questions({book, setState, setMessage}: QuestionsProps) {
 
   return (
     <div className="h-full flex flex-col justify-between items-center bg-slate-200 border-2 border-black rounded-lg p-4">
-      <Title>Round #{roundNumber}</Title>
+      <Title>{`Round #${roundNumber}`}</Title>
       {
         round ?
         <div className={`flex flex-col m-4 ${questionVisible ? 'transition-opacity duration-500' : 'transition-opacity duration-500 opacity-0'}`}>
@@ -62,7 +62,7 @@ export function Questions({book, setState, setMessage}: QuestionsProps) {
           </div>
           <div className="flex flex-col md:flex-row flex-wrap justify-center gap-2 py-4">
             {round.options.map((option, index) => (
-              <GameButton classNames={`min-w-60 hover:shadow-xl hover:text-slate-200 ${optionColors[index]}`} onPress={(event: any) => handleOnPress(event.target.value)}>{option}</GameButton>
+              <GameButton key={option} classNames={`min-w-60 hover:shadow-xl hover:text-slate-200 ${optionColors[index]}`} onPress={(event: React.MouseEvent<HTMLButtonElement>) => handleOnPress((event.target as HTMLButtonElement).value)}>{option}</GameButton>
             ))}
           </div>
         </div>

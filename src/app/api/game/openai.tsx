@@ -12,7 +12,7 @@ function summarizeRounds(rounds: Round[]) {
     return "There is no history, the game is just starting."
   }
   const roundSummaries = []
-  for (var i = 0; i < rounds.length; i ++) {
+  for (let i = 0; i < rounds.length; i ++) {
     const round = rounds[i];
     roundSummaries.push(`
       Round ${i+1}: You asked the following prompt:

@@ -1,4 +1,4 @@
-type GameButtonProps = {classNames?: string, children: any, onPress: Function};
+type GameButtonProps = {classNames?: string, children: string, onPress: (event: React.MouseEvent<HTMLButtonElement>) => void};
 
 export function GameButton({classNames, children, onPress}: GameButtonProps) {
   return (

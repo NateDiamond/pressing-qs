@@ -1,4 +1,4 @@
-type TitleProps = {children: any, classNames?: string};
+type TitleProps = {children: string, classNames?: string};
 
 export function MainTitle() {
   return (

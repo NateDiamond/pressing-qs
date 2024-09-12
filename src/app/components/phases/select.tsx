@@ -2,7 +2,7 @@ import { Dispatch, SetStateAction, useEffect, useState } from "react";
 import { Title } from "../text";
 import { Book } from "@/types";
 import { backendApiCall } from "@/app/utils/backend";
-import { GameState, SetBook, SetGameState, SetState } from "./constants";
+import { GameState, SetBook, SetGameState } from "./constants";
 
 type SearchBarProps = {searchTerm: string, setSearchTerm: Dispatch<SetStateAction<string>>};
 type SearchCardProps = {book: Book, setState: SetGameState, setBook: SetBook};
