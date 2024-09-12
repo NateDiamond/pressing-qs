@@ -17,7 +17,7 @@ Open [http://localhost:3000](http://localhost:3000) to see the game run locally.
 Create a `.env` file in the root of the project with the following variables:
 ```bash
 OPENAI_API_KEY=<your openai api key goes here>
-DATABASE_URL=postgresql://<user-name>@localhost:5432/<db-name>
+POSTGRES_URL=postgresql://<user-name>@localhost:5432/<db-name>
 ```
 ## Deploy on Vercel
 
