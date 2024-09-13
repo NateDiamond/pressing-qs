@@ -62,7 +62,7 @@ export function formatGuessPrompt(rounds: Round[]): string {
 
 export async function getQuestion(game: GameWithRounds): Promise<Round> {
   let prompt;
-  const isGuess = game.rounds.length === 19 || game.rounds.length > 5 && Math.random()*5 < 1;
+  const isGuess = game.rounds.length === 19 || (game.rounds.length > 5 && Math.random()*5 < 1);
   if (isGuess) {
     prompt = formatGuessPrompt(game.rounds);
   } else {
